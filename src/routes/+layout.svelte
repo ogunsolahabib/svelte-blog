@@ -1,21 +1,23 @@
 <script>
 	import '@fontsource/habibi';
 	import Header from '../components/Header.svelte';
+	import { fade } from 'svelte/transition';
 </script>
 
 <Header />
-<div {...$$props} class={`container${$$props.class ? ' ' + $$props.class : ''}`}>
-	<slot />
-</div>
+<main class="main-wrapper" in:fade={{ delay: 0 }}>
+	<slot class="main" />
+</main>
 
 <style lang="scss">
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 16px;
+	.main-wrapper {
+		padding-top: 100px;
 	}
-	.main-container {
-		margin-top: 100px;
+
+	:global(body),
+	:global(html) {
+		margin: 0;
+		padding: 0;
 	}
 
 	:global(html) {
@@ -30,6 +32,11 @@
 		line-height: 1.5;
 		color: #fff;
 		background-color: rgb(23, 36, 44);
+	}
+
+	::global(*) {
+		margin: 0;
+		padding: 0;
 	}
 
 	/* links */
@@ -49,5 +56,83 @@
 		background-color: transparent;
 		border: none;
 		outline: none;
+	}
+
+	/* resets */
+	:global(ul) {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	:global(h1, h2, h3, h4, h5, h6) {
+		margin: 0;
+		padding: 0;
+		line-height: 1.5;
+	}
+
+	:global(p) {
+		margin: 0;
+		padding: 0;
+	}
+
+	:global(img) {
+		display: block;
+		max-width: 100%;
+	}
+
+	:global(button) {
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		color: inherit;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+
+	:global(svg) {
+		fill: currentColor;
+	}
+
+	:global(h1) {
+		font-size: 4rem;
+	}
+
+	:global(h2) {
+		font-size: 3.2rem;
+	}
+
+	:global(h3) {
+		font-size: 2.4rem;
+	}
+
+	:global(h4) {
+		font-size: 2rem;
+	}
+
+	:global(h5) {
+		font-size: 1.8rem;
+	}
+
+	:global(h6) {
+		font-size: 1.6rem;
+	}
+
+	:global(p) {
+		font-size: 1.6rem;
+	}
+
+	:global(a) {
+		font-size: 1.6rem;
+	}
+
+	:global(input) {
+		font-size: 1.6rem;
+	}
+
+	:global(button) {
+		font-size: 1.6rem;
 	}
 </style>

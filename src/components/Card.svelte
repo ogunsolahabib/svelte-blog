@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { crossfade, fade } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import type { Post } from '../types/posts';
 	import htmlCodeToSymbol from '../utils/htmlCodeToSymbol';
 	import { onMount } from 'svelte';
@@ -23,7 +23,7 @@
 	});
 </script>
 
-<a class="post-card" href={'/'} in:fade={{ delay: (index + 1) * 300 }}>
+<a class="post-card" href={`/post/${post.slug}`} in:fade={{ delay: (index + 1) * 300 }}>
 	<div class="post-card__content">
 		<div class="post-card__image-wrapper">
 			<img src={post.featured_media} alt={post.title} />
