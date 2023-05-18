@@ -1,28 +1,54 @@
 <script>
+	import Container from './Container.svelte';
 	import Logo from './Logo.svelte';
 </script>
 
 <header>
-	<nav>
-		<Logo />
+	<Container _class="header__container">
+		<nav>
+			<a href="/" class="header__logo-wrapper">
+				<Logo />
+			</a>
 
-		<ul>
-			<li>
-				<a href="/">Home</a>
-			</li>
-			<li>
-				<a href="/page/1">Posts</a>
-			</li>
-		</ul>
-	</nav>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/page/1">Posts</a>
+				</li>
+			</ul>
+		</nav>
+	</Container>
 </header>
 
 <style lang="scss">
 	header {
+		/* height: 100px; */
+		position: sticky;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: rgb(23, 36, 44);
+		z-index: 1000;
+		padding: 15px 0;
+	}
+
+	.header {
+		&__logo-wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	:global(.logo) {
+		width: 200px;
+	}
+	:global(.header__container) {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 100px;
+		/* height: 100%; */
 		margin-bottom: 60px;
 	}
 
@@ -31,8 +57,6 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		max-width: 1200px;
-		padding: 0 20px;
 	}
 
 	@media (max-width: 768px) {
