@@ -24,14 +24,14 @@
 
 <style lang="scss">
 	header {
-		/* height: 100px; */
 		position: sticky;
 		top: 0;
 		left: 0;
 		right: 0;
 		background-color: rgb(23, 36, 44);
 		z-index: 1000;
-		padding: 15px 0;
+		padding: 30px 0;
+		background: linear-gradient(rgb(23, 36, 44) 90%, transparent 100%);
 	}
 
 	.header {
