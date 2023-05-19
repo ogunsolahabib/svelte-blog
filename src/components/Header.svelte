@@ -4,7 +4,7 @@
 </script>
 
 <header>
-	<Container _class="header__container">
+	<Container class="header__container">
 		<nav>
 			<a href="/" class="header__logo-wrapper">
 				<Logo />

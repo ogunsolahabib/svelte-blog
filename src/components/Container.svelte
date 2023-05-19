@@ -1,8 +1,8 @@
 <script lang="ts">
-	export let _class: string | undefined;
+	// export let $$restProps: any = {};
 </script>
 
-<div class={`container${_class ? ' ' + _class : ''}`} {...$$restProps}>
+<div {...$$props} class={`container${$$props.class ? ' ' + $$props.class : ''}`}>
 	<slot />
 </div>
 
