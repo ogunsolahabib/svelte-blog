@@ -15,7 +15,7 @@
 </script>
 
 <div class="post-hero">
-	<Container _class="post-hero__container">
+	<Container class="post-hero__container">
 		<div class="post-hero__image-wrapper">
 			<img src={post.featured_media} alt={post.title} />
 		</div>
