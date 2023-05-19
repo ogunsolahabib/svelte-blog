@@ -12,10 +12,13 @@
 
 			<ul>
 				<li>
-					<a href="/">Home</a>
+					<a href="https://synergist.netlify.app">Home</a>
 				</li>
 				<li>
-					<a href="/page/1">Posts</a>
+					<a href="https://github.com/ogunsolahabib">Posts</a>
+				</li>
+				<li>
+					<a href="/">Blog</a>
 				</li>
 			</ul>
 		</nav>
@@ -66,8 +69,11 @@
 	}
 
 	ul {
-		display: flex;
+		display: none;
 		gap: 20px;
+		@media (min-width: 768px) {
+			display: flex;
+		}
 
 		li {
 			list-style: none;

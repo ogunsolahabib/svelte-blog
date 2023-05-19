@@ -25,10 +25,12 @@
 
 	:global(.post__body > *) {
 		margin: auto;
-		max-width: calc(100% - 40px);
 		margin-left: 0;
 		margin-right: 0;
 
+		@media screen and (min-width: 600px) {
+			max-width: calc(100% - 40px);
+		}
 		@media screen and (min-width: 768px) {
 			max-width: 51rem;
 		}
