@@ -13,9 +13,9 @@
 
 <style lang="scss">
 	:global(.post__body) {
-		/* gap: 16px; */
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		margin-left: auto;
 		margin-right: auto;
 		width: fit-content;
@@ -35,12 +35,14 @@
 	}
 	:global(.post__body img),
 	:global(.post__body video),
+	:global(.post__body figure),
 	:global(.post__body iframe) {
-		max-width: 100%;
 		margin: 0 auto;
 		display: block;
 		margin-top: 20px;
 		margin-bottom: 20px;
+		max-width: 100%;
+		border-radius: 2rem;
 	}
 	:global(.post__body p),
 	:global(.post__body li) {
