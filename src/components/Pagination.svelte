@@ -2,19 +2,14 @@
 	import { afterNavigate } from '$app/navigation';
 
 	import { page } from '$app/stores';
+	import ChevronLeft from './icons/ChevronLeft.svelte';
+	import ChevronRight from './icons/ChevronRight.svelte';
 	let currentPageVal: string | number | null = '1';
-
-	const { url } = $page;
-	const searchParams = new URLSearchParams(url.search);
 
 	export let currentPage: number | string = 1;
 
 	const getUrl = (currentPage: number) => {
 		return `/page/${currentPage}`;
-		searchParams.set('page', currentPage.toString());
-		const url = new URL($page.url);
-		url.search = searchParams.toString();
-		return url.toString();
 	};
 
 	afterNavigate(() => {
@@ -25,7 +20,9 @@
 <div>
 	{#if Number(currentPageVal) > 1}
 		<a href={getUrl(Number(currentPageVal) - 1)} class="btn-dir">
-			<button>←</button>
+			<button>
+				<ChevronLeft />
+			</button>
 		</a>
 	{/if}
 	{#each [1, 2, 3, 4, 5] as page}
@@ -35,7 +32,7 @@
 	{/each}
 
 	<a href={getUrl(Number(currentPageVal || 0) + 1)} class="btn-dir">
-		<button>→</button>
+		<button><ChevronRight /></button>
 	</a>
 </div>
 
@@ -71,17 +68,16 @@
 		width: 30px;
 		height: 30px;
 		border-radius: 50%;
-		display: block;
 		align-items: center;
 		justify-content: center;
 		padding: 8px;
-
 		background-color: rgb(115, 206, 207);
 		text-decoration: none;
 		cursor: pointer;
 
 		button {
 			font-size: 1rem;
+			display: flex;
 		}
 	}
 </style>
