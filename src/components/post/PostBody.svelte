@@ -3,8 +3,6 @@
 	import Container from '../Container.svelte';
 
 	export let content: string;
-
-	// interfac
 </script>
 
 <Container class="post__body">

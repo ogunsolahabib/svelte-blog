@@ -1,5 +1,5 @@
 <script>
-	import '@fontsource/habibi';
+	import '@fontsource-variable/nunito';
 	import Header from '../components/Header.svelte';
 	import { fade } from 'svelte/transition';
 </script>
@@ -22,7 +22,7 @@
 
 	:global(html) {
 		font-size: 62.5%;
-		font-family: 'Habibi', Geneva, Tahoma, sans-serif;
+		font-family: 'Nunito Variable', Geneva, Tahoma, sans-serif;
 
 		@media (max-width: 768px) {
 			font-size: 50%;
@@ -48,7 +48,7 @@
 	/* inputs */
 	:global(input) {
 		font-family: inherit;
-		font-family: 'Habibi', sans-serif;
+		font-family: 'Nunito Variable', sans-serif;
 		letter-spacing: 3;
 		font-size: inherit;
 		line-height: inherit;
