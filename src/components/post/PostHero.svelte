@@ -5,7 +5,6 @@
 	import Space from '../Space.svelte';
 	import CalendarIcon from '../icons/CalendarIcon.svelte';
 	import StopwatchIcon from '../icons/StopwatchIcon.svelte';
-	import { fade } from 'svelte/transition';
 
 	export let post: any;
 
@@ -123,6 +122,10 @@
 				font-size: 1.6rem;
 				color: rgb(100, 116, 139);
 				margin-bottom: 8px;
+
+				@media screen and (min-width: 768px) {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
