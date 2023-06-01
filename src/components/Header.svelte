@@ -4,7 +4,7 @@
 </script>
 
 <header>
-	<Container class="header__container">
+	<Container fillViewport class="header__container">
 		<nav>
 			<a href="/" class="header__logo-wrapper">
 				<Logo />
@@ -51,7 +51,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		/* height: 100%; */
 		margin-bottom: 60px;
 	}
 
