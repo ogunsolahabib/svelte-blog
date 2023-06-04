@@ -33,6 +33,7 @@
 
 		&--fill-viewport {
 			max-width: 100vw;
+			padding: 30px 50px;
 		}
 	}
 </style>
