@@ -55,7 +55,7 @@
 	:global(.post__body h1),
 	:global(.post__body h2),
 	:global(.post__body h3) {
-		margin-top: 20px;
+		margin-top: 2.5rem;
 		color: rgb(223, 243, 244);
 	}
 

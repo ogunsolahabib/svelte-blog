@@ -26,7 +26,7 @@
 <a class="post-card" href={`/post/${post.slug}`} in:fade={{ delay: (index + 1) * 300 }}>
 	<div class="post-card__content">
 		<div class="post-card__image-wrapper">
-			<img src={post.featured_media} alt={post.title} />
+			<img src={post.featured_media} alt={post.title} loading="lazy" />
 		</div>
 		<div>
 			<h2>

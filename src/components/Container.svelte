@@ -1,8 +1,19 @@
 <script lang="ts">
 	// export let $$restProps: any = {};
+	export let fillViewport: boolean = false;
+
+	const classes = () => {
+		const classList = [`container${$$props.class ? ' ' + $$props.class : ''}`];
+
+		if (fillViewport) {
+			classList.push('container--fill-viewport');
+		}
+
+		return classList.join(' ');
+	};
 </script>
 
-<div {...$$props} class={`container${$$props.class ? ' ' + $$props.class : ''}`}>
+<div {...$$props} class={classes()}>
 	<slot />
 </div>
 
@@ -18,6 +29,11 @@
 
 		@media screen and (min-width: 992px) {
 			padding: 0 100px;
+		}
+
+		&--fill-viewport {
+			max-width: 100vw;
+			padding: 30px 50px;
 		}
 	}
 </style>

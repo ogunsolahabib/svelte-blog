@@ -16,7 +16,7 @@
 <div class="post-hero">
 	<Container class="post-hero__container">
 		<div class="post-hero__image-wrapper">
-			<img src={post.featured_media} alt={post.title} />
+			<img src={post.featured_media} alt={post.title} loading="lazy" />
 		</div>
 		<div class="post-hero__content">
 			<p class="post-hero__content__category">

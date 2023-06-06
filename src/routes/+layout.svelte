@@ -2,12 +2,15 @@
 	import '@fontsource-variable/nunito';
 	import Header from '../components/Header.svelte';
 	import { fade } from 'svelte/transition';
+	import Footer from '../components/Footer.svelte';
 </script>
 
 <Header />
 <main class="main-wrapper" in:fade={{ delay: 0 }}>
 	<slot class="main" />
 </main>
+
+<Footer />
 
 <style lang="scss">
 	.main-wrapper {

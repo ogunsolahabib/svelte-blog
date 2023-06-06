@@ -4,7 +4,7 @@
 </script>
 
 <header>
-	<Container class="header__container">
+	<Container fillViewport class="header__container">
 		<nav>
 			<a href="/" class="header__logo-wrapper">
 				<Logo />
@@ -33,7 +33,6 @@
 		right: 0;
 		background-color: rgb(23, 36, 44);
 		z-index: 1000;
-		padding: 30px 0;
 		background: linear-gradient(rgb(23, 36, 44) 90%, transparent 100%);
 	}
 
@@ -51,7 +50,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		/* height: 100%; */
 		margin-bottom: 60px;
 	}
 
