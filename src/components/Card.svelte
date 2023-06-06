@@ -9,7 +9,7 @@
 	export let index: number;
 	let categoryName = '';
 
-	const string = post.title.length > 100 ? `${post.title.substring(0, 50)}...` : post.title;
+	const postTitle = post.title.length > 100 ? `${post.title.substring(0, 50)}...` : post.title;
 
 	onMount(async () => {
 		const categoryId = post.categories[0];
@@ -23,14 +23,19 @@
 	});
 </script>
 
-<a class="post-card" href={`/post/${post.slug}`} in:fade={{ delay: (index + 1) * 300 }}>
+<a
+	class="post-card"
+	href={`/post/${post.slug}`}
+	in:fade={{ delay: (index + 1) * 300 }}
+	aria-label={post.title}
+>
 	<div class="post-card__content">
 		<div class="post-card__image-wrapper">
 			<img src={post.featured_media} alt={post.title} loading="lazy" />
 		</div>
 		<div>
 			<h2>
-				{@html htmlCodeToSymbol(string)}
+				{@html htmlCodeToSymbol(postTitle)}
 			</h2>
 			<div class="post-card__author">
 				by {post.author}

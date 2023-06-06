@@ -33,7 +33,11 @@
 
 		&--fill-viewport {
 			max-width: 100vw;
-			padding: 30px 50px;
+			padding: 0 40px;
+
+			@media screen and (min-width: 768px) {
+				padding: 30px 50px;
+			}
 		}
 	}
 </style>

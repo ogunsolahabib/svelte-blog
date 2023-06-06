@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 
-	import { page } from '$app/stores';
 	import ChevronLeft from './icons/ChevronLeft.svelte';
 	import ChevronRight from './icons/ChevronRight.svelte';
 	let currentPageVal: string | number | null = '1';
@@ -19,8 +18,8 @@
 
 <div>
 	{#if Number(currentPageVal) > 1}
-		<a href={getUrl(Number(currentPageVal) - 1)} class="btn-dir">
-			<button>
+		<a href={getUrl(Number(currentPageVal) - 1)} class="btn-dir" aria-label="Go to previous page">
+			<button aria-label="Previous" disabled={Number(currentPageVal) === 1}>
 				<ChevronLeft />
 			</button>
 		</a>
@@ -31,8 +30,8 @@
 		>
 	{/each}
 
-	<a href={getUrl(Number(currentPageVal || 0) + 1)} class="btn-dir">
-		<button><ChevronRight /></button>
+	<a href={getUrl(Number(currentPageVal || 0) + 1)} class="btn-dir" aria-label="Go to next page">
+		<button aria-label="Next" disabled={Number(currentPageVal) === 5}><ChevronRight /></button>
 	</a>
 </div>
 
