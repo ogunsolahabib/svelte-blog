@@ -6,19 +6,19 @@
 <header>
 	<Container fillViewport class="header__container">
 		<nav>
-			<a href="/" class="header__logo-wrapper">
+			<a href="/" class="header__logo-wrapper" aria-label="Home">
 				<Logo />
 			</a>
 
 			<ul>
 				<li>
-					<a href="https://synergist.netlify.app">Home</a>
+					<a href="https://synergist.netlify.app" aria-label="Home">Home</a>
 				</li>
 				<li>
-					<a href="https://github.com/ogunsolahabib">Posts</a>
+					<a href="https://github.com/ogunsolahabib" aria-label="Posts">Posts</a>
 				</li>
 				<li>
-					<a href="/">Blog</a>
+					<a href="/" aria-label="Blog">Blog</a>
 				</li>
 			</ul>
 		</nav>
